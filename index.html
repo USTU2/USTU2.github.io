@@ -142,7 +142,6 @@ function go(ob)
    console.log(sub)
    var link = document.createElement('A');
    document.body.appendChild(link);
-   link.target='__blank';
    link.style = 'display: none';
    link.href = (sub == "рф") ? 'https://угту.' + sub : 'http://'+sub+'.ugtu.net/';
    link.click();
