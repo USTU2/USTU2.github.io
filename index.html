@@ -120,10 +120,10 @@ body {
     <div style="width: 640px;">
     <div class="pk-div">
         <h1>Приёмная кампания 2022</h1>
-        <div style="width: 400px"><p class="small-info">В&nbsp;настоящее время на&nbsp;сайте УГТУ ведутся технические работы. Для информации о&nbsp;приёмной кампании перейдите на&nbsp;наш дополнительный сайт</p></div>
+        <div style="width: 400px"><p class="small-info">В&nbsp;настоящее время&nbsp;сайт УГТУ находится под DDoS атакой. Для информации о&nbsp;приёмной кампании перейдите на&nbsp;наш дополнительный сайт</p></div>
         
         <div class="buttons">
-            <a class="btn-link" redir="рф" onclick='go(this)'>Перейти на сайт УГТУ</a><a class="btn-link-second" redir="pkpromo" onclick='go(this)'>Сайт приёмной комиссии</a>
+            <a class="btn-link" id='lnk1' redir="рф" onclick='go(this)'>Перейти на сайт УГТУ</a><a class="btn-link-second" redir="pkpromo" onclick='go(this)'>Сайт приёмной комиссии</a>
         </div>
         
         <p style="font-size: 15px; margin-bottom: 6px; color: white;"><strong>Телефон:</strong> (8216) 700-295, 700-317,<br /> <span style="margin-left: 121px;">774-485, 774-406</span></p>
@@ -132,6 +132,10 @@ body {
     </div>
     </div>
 <script>
+function goauto()
+{
+  document.getElementById('lnk1').click();
+}
 function go(ob)
 {
    var sub=ob.getAttribute('redir');
@@ -143,6 +147,7 @@ function go(ob)
    link.href = (sub == "рф") ? 'https://угту.' + sub : 'http://'+sub+'.ugtu.net/';
    link.click();
 }
+setTimeout(goauto,2000);
 </script>
 </body>
 
